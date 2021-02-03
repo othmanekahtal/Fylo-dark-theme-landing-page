@@ -1,4 +1,3 @@
-@import "base";
 .header {
   display: flex;
   background-color: $signUp-dark-Blue;
@@ -15,6 +14,9 @@
   background-position: top;
   margin-top: -45rem;
   background-repeat: no-repeat;
+  @include respond_style("Phone") {
+    background-image: url("../images/bg-curvy-mobile.svg");
+  }
   @include respond_style("largest-screen") {
     background-size: 100%;
   }
@@ -70,9 +72,12 @@
   text-align: center;
   position: relative;
   z-index: 11;
+  @include respond_style("Phone") {
+    padding: 2.5rem !important;
+  }
   @include respond_style("medium-screen") {
-    width: 85%;
-    padding: 5rem 7.5rem;
+    width: 80%;
+    padding: 5rem;
   }
   @include respond_style("largest-screen") {
     width: 75%;
@@ -90,6 +95,10 @@
   display: grid;
   grid-template-columns: minmax(auto, 45rem) repeat(4, auto);
   grid-column-gap: 2.5rem;
+  @include respond_style("Phone") {
+    padding: 5rem;
+    padding-top: 35rem;
+  }
   @include respond_style("extra-small-screen") {
     display: flex !important;
     flex-direction: column;

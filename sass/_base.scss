@@ -71,16 +71,20 @@ $white: hsl(0, 0%, 100%);
 html {
   // initial root font
   font-size: 62.5%;
-  @include respond_style("extra-small-screen") {
-    font-size: 55%;
-  }
-  @include respond_style("small-screen") {
-    font-size: 57.5%; // 9px for largest screen
+
+  @include respond_style("largest-screen") {
+    font-size: 90%; // 15px for largest screen
   }
   @include respond_style("medium-screen") {
     font-size: 60%; // 10px for largest screen
   }
-  @include respond_style("largest-screen") {
-    font-size: 90%; // 15px for largest screen
+  @include respond_style("small-screen") {
+    font-size: 57.5%; // 9px for largest screen
+  }
+  @include respond_style("extra-small-screen") {
+    font-size: 52.5%;
+  }
+  @include respond_style("Phone") {
+    font-size: 45.5%;
   }
 }
