@@ -39,4 +39,4 @@ Want some support on the challenge? Join our Slack community and ask questions i
 # preview Final result :
 
 you can show the result in phone and Desktop version :
-<a style="text-decoration:underline;" href="#">click to preview</a>
+<a style="text-decoration:underline;" href="https://othmanekahtal.github.io/Fylo-dark-theme-landing-page/">click to preview</a>
