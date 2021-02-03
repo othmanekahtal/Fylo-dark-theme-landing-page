@@ -38,6 +38,9 @@
   text-align: center;
   position: relative;
   z-index: 2;
+  @include respond_style("extra-small-screen") {
+    width: 75%;
+  }
 }
 .header-illustration {
   width: 100%;
@@ -55,11 +58,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include respond_style("extra-small-screen") {
+    width: 100%;
+  }
 }
 .feature-box {
   flex-basis: 37.5%;
   text-align: center;
   margin: auto;
+  @include respond_style("medium-screen") {
+    flex-basis: 40.5%;
+  }
   .illustration {
     height: 7.5rem;
     margin-bottom: 1.5rem;
@@ -74,6 +83,10 @@
   }
   &__paragraph {
     padding: 3rem;
+    @include respond_style("medium-screen") {
+      padding: 1.5rem;
+      font-size: 1.5rem;
+    }
   }
 }
 // end styling Feature section !!
@@ -82,6 +95,18 @@
 .working__img {
   flex-basis: 40%;
   margin-right: 10rem;
+  @include respond_style("extra-small-screen") {
+    margin-right: 0 !important;
+    margin-bottom: 5rem;
+  }
+  @include respond_style("medium-screen") {
+    flex-basis: 50%;
+    margin-right: 2.5rem;
+  }
+  @include respond_style("largest-screen") {
+    flex-basis: 50%;
+    margin-right: 5rem;
+  }
   img {
     width: 100%;
   }
@@ -124,8 +149,27 @@
   background-color: $testimonials-dark-blue;
   border-radius: 0.5rem;
   padding: 4.5rem;
+  @include respond_style("extra-small-screen") {
+    margin-bottom: 2.5rem;
+  }
+  @include respond_style("medium-screen") {
+    padding: 2.75rem;
+  }
+  @include respond_style("largest-screen") {
+    padding: 3rem;
+  }
+
   &:not(:last-child) {
     margin-right: 5rem;
+    @include respond_style("extra-small-screen") {
+      margin-right: 0 !important;
+    }
+    @include respond_style("medium-screen") {
+      margin-right: 2.75rem;
+    }
+    @include respond_style("largest-screen") {
+      margin-right: 3.5rem;
+    }
   }
 }
 .testimonial-opinion {
@@ -171,6 +215,9 @@
 .section-start__form {
   margin-top: 3.5rem;
   display: flex;
+  @include respond_style("extra-small-screen") {
+    flex-direction: column;
+  }
   & input[type="email"] {
     flex-grow: 1;
     padding: 1.7rem 2.5rem;
@@ -178,12 +225,19 @@
     border: 2px solid transparent;
     outline: none;
     margin-right: 2.5rem;
+    @include respond_style("extra-small-screen") {
+      margin-right: 0 !important ;
+      margin-bottom: 2.5rem;
+    }
     &:focus {
       border-color: $cyan;
     }
     // here problem don't use requirement in html
     &:focus:invalid {
       border: 2px solid $red;
+    }
+    &::placeholder {
+      font-size: inherit;
     }
   }
 }
@@ -193,12 +247,16 @@
 
 .icon-footer {
   fill: $white;
-  max-width: 3.5rem;
-  max-height: 3.5rem;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
 }
 .logo-footer {
   grid-column: 1/-1;
   margin-bottom: 5rem;
+  @include respond_style("extra-small-screen") {
+    grid-column: unset;
+    align-self: center;
+  }
 }
 %display-flex {
   display: flex;
@@ -217,6 +275,9 @@
   }
 }
 .footer {
+  @include respond_style("extra-small-screen") {
+    // padding: 5rem;
+  }
   p,
   span {
     padding: 1.5rem;
@@ -227,6 +288,9 @@
   &--2 {
     justify-self: baseline;
     padding-top: 1.5rem;
+    @include respond_style("extra-small-screen") {
+      margin: 2.5rem 0;
+    }
     a {
       display: block;
       color: white;

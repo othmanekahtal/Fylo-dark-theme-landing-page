@@ -9,6 +9,9 @@
   font-size: 1.5rem;
   padding: 1.7rem 2.6rem;
   transition: all 0.45s ease-in-out;
+  @include respond_style("largest-screen") {
+    padding: 1.5rem 3.5rem;
+  }
   &:hover {
     background-color: darken($cyan, 15%);
   }

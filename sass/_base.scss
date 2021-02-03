@@ -23,12 +23,6 @@ $red: hsl(0, 100%, 63%);
 
 $white: hsl(0, 0%, 100%);
 
-@mixin for_Phone {
-  @media only screen and (max-width: 23.45em) {
-    @content;
-  }
-}
-
 // heading :
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 // font-family: 'Raleway', sans-serif;
@@ -36,6 +30,35 @@ $white: hsl(0, 0%, 100%);
 // body :
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 //font-family: 'Open Sans', sans-serif;
+
+@mixin respond_style($breakpoint) {
+  @if ($breakpoint == "largest-screen") {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "medium-screen") {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "small-screen") {
+    @media only screen and (max-width: 65.25em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "extra-small-screen") {
+    @media only screen and (max-width: 47.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "Phone") {
+    // phone : 375px = 23.45 em
+    @media only screen and (max-width: 23.45em) {
+      @content;
+    }
+  }
+}
 * {
   &,
   &::after,
@@ -48,4 +71,16 @@ $white: hsl(0, 0%, 100%);
 html {
   // initial root font
   font-size: 62.5%;
+  @include respond_style("extra-small-screen") {
+    font-size: 55%;
+  }
+  @include respond_style("small-screen") {
+    font-size: 57.5%; // 9px for largest screen
+  }
+  @include respond_style("medium-screen") {
+    font-size: 60%; // 10px for largest screen
+  }
+  @include respond_style("largest-screen") {
+    font-size: 90%; // 15px for largest screen
+  }
 }
