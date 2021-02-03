@@ -1,0 +1,50 @@
+@import "base";
+.header {
+  display: flex;
+  background-color: $signUp-dark-Blue;
+  padding: 5rem 3rem;
+  flex-direction: column;
+  align-items: center;
+}
+.section-features {
+  background-color: $main-dark-Blue;
+  color: $white;
+  padding: 10rem 5rem;
+}
+.section-working {
+  background-color: $main-dark-Blue;
+  padding: 15rem 10rem;
+  display: flex;
+  align-items: center;
+}
+.section-testimonials {
+  background-color: $main-dark-Blue;
+  display: flex;
+  align-items: stretch;
+  color: $white;
+  padding: 10rem;
+  padding-bottom: 45rem;
+  position: relative;
+  z-index: 10;
+}
+.section-start {
+  background-color: $signUp-dark-Blue;
+  width: 60%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  padding: 5rem 15rem;
+  text-align: center;
+  position: relative;
+  z-index: 11;
+}
+
+.footer {
+  background-color: $footer-dark-blue;
+  padding: 5rem 10rem;
+  padding-top: 35rem;
+  margin-top: -45rem;
+  position: relative;
+  z-index: 9;
+  display: grid;
+  grid-template-columns: 50rem repeat(4, auto);
+}

@@ -1,0 +1,51 @@
+// variables:
+//Primary:
+
+//(intro and email sign up background):
+$signUp-dark-Blue: hsl(217, 28%, 15%);
+
+//main background:
+$main-dark-Blue: hsl(218, 28%, 13%);
+
+//footer background:
+$footer-dark-blue: hsl(216, 53%, 9%);
+
+//testimonials background :
+$testimonials-dark-blue: hsl(219, 30%, 18%);
+
+// Accent :
+
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$red: hsl(0, 100%, 63%);
+
+// Neutral :
+
+$white: hsl(0, 0%, 100%);
+
+@mixin for_Phone {
+  @media only screen and (max-width: 23.45em) {
+    @content;
+  }
+}
+
+// heading :
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+// font-family: 'Raleway', sans-serif;
+
+// body :
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+//font-family: 'Open Sans', sans-serif;
+* {
+  &,
+  &::after,
+  &::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+html {
+  // initial root font
+  font-size: 62.5%;
+}
