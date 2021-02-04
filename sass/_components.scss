@@ -169,6 +169,7 @@
   background-color: $testimonials-dark-blue;
   border-radius: 0.5rem;
   padding: 4.5rem;
+  box-shadow: 0.5rem 0.5rem 2rem $testimonials-dark-blue;
   @include respond_style("largest-screen") {
     padding: 3rem;
   }

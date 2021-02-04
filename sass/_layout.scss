@@ -72,6 +72,7 @@
   text-align: center;
   position: relative;
   z-index: 11;
+  box-shadow: 1rem 0 2.5rem $footer-dark-blue;
   @include respond_style("Phone") {
     padding: 2.5rem !important;
   }
